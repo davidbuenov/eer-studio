@@ -73,6 +73,51 @@ Para previsualizar el build:
 
 ```bash
 npm run preview
+## 🌍 Publicación en GitHub Pages
+
+Este proyecto está preparado para desplegarse automáticamente en **GitHub Pages** usando una *GitHub Action* incluida en `.github/workflows/deploy-pages.yml`.
+
+### Cómo funciona
+
+1. Cada push a la rama `main` ejecuta la acción.
+2. Se hace build con `npm run build` (base configurada en `vite.config.ts` como `/eer-studio/`).
+3. El contenido de `dist/` se publica en GitHub Pages.
+4. La URL final será: `https://davidbuenov.github.io/eer-studio/`.
+
+### Activar GitHub Pages
+
+1. Ve a Settings → Pages en el repositorio.
+2. Verifica que la fuente (source) esté en "GitHub Actions" (debería aparecer automáticamente tras el primer deploy).
+
+### Personalizar dominio (Opcional)
+
+Si quieres usar un dominio propio:
+1. Crea un archivo `CNAME` dentro de `dist/` en tiempo de build (puedes añadir un paso en la acción o un script).
+2. Apunta tu DNS (registro CNAME) al dominio `davidbuenov.github.io`.
+
+Ejemplo de paso adicional en el workflow:
+
+```yaml
+			- name: Add CNAME
+				run: echo "mi-dominio.com" > dist/CNAME
+```
+
+### Deploy manual (alternativa)
+
+Si prefieres hacerlo manual sin Actions:
+```bash
+npm run build
+git checkout --orphan gh-pages
+git --work-tree dist add --all
+git --work-tree dist commit -m "Deploy"
+git push origin gh-pages --force
+git checkout main
+```
+
+## 🔐 Seguridad
+
+Este proyecto no envía datos a servidores externos. Los archivos `.eer` solo se manejan localmente en tu navegador. Usa navegadores modernos para aprovechar la File System Access API.
+
 ```
 
 ## 📖 Uso
