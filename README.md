@@ -33,7 +33,7 @@ Los siguientes ficheros ya están disponibles en la carpeta `ejemplos/`:
 
 - `ejemplos/202511ER_Hotel.eer` — Caso de estudio: **HOTELES ROYAL UMA** (habitaciones, servicios, personal y reservas). Ábrelo en la app para ver un diagrama completo.
 
-Si vas añadiendo más ficheros `.eer` dentro de `ejemplos/`, puedo ayudarte a listarlos aquí y subirlos al repositorio para que estén disponibles desde GitHub.
+
 
 ## 🚀 Características EER Soportadas
 
