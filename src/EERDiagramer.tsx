@@ -857,6 +857,10 @@ Genera el código EER Studio para el siguiente problema. Identifica correctament
                   <a href="https://davidbuenov.com/" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-indigo-700 hover:text-indigo-900 hover:underline transition-colors">
                     David Bueno Vallejo
                   </a>
+                  <br />
+                  <a href="https://github.com/davidbuenov/eer-studio" target="_blank" rel="noopener noreferrer" className="text-xs mt-2 inline-block text-slate-500 hover:text-slate-700 hover:underline transition-colors">
+                    Repositorio GitHub · https://github.com/davidbuenov/eer-studio
+                  </a>
                 </p>
               </div>
 
