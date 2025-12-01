@@ -1,5 +1,7 @@
 # 🎨 EER Studio
 
+[![Live demo](https://img.shields.io/badge/Live%20Demo-View-blue?logo=github)](https://davidbuenov.github.io/eer-studio/)
+
 **Editor de Diagramas Entidad-Relación Extendido (EER) con Edición Bidireccional**
 
 EER Studio es una aplicación web interactiva para crear y editar diagramas Entidad-Relación Extendido mediante un lenguaje específico de dominio (DSL) simple e intuitivo. Los cambios en el código se reflejan automáticamente en el diagrama visual, y viceversa: ¡arrastra los nodos y el código se actualiza con las nuevas coordenadas!
@@ -16,6 +18,14 @@ EER Studio es una aplicación web interactiva para crear y editar diagramas Enti
 - 📚 **Guía de sintaxis integrada** con ejemplos y referencia completa
 - 🔍 **Zoom y paneo** para trabajar con diagramas grandes
 - 🌐 **Compatible con navegadores modernos**
+
+## 🌐 Demo en vivo y ejemplos
+
+Puedes probar la aplicación ya desplegada en GitHub Pages:
+
+https://davidbuenov.github.io/eer-studio/
+
+Además, el repositorio incluye una carpeta `examples/` con varios ficheros de ejemplo con extensión `.eer` que puedes abrir directamente en la app (File → Open) para ver diagramas de muestra y editar.
 
 ## 🚀 Características EER Soportadas
 
