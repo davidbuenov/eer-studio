@@ -25,7 +25,7 @@ Puedes probar la aplicación ya desplegada en GitHub Pages:
 
 https://davidbuenov.github.io/eer-studio/
 
-Además, el repositorio incluye una carpeta `examples/` con varios ficheros de ejemplo con extensión `.eer` que puedes abrir directamente en la app (File → Open) para ver diagramas de muestra y editar.
+Además, el repositorio incluye una carpeta `ejemplos/` con varios ficheros de ejemplo con extensión `.eer` que puedes abrir directamente en la app (File → Open) para ver diagramas de muestra y editar.
 
 ## 🚀 Características EER Soportadas
 
