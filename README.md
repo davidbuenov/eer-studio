@@ -27,6 +27,14 @@ https://davidbuenov.github.io/eer-studio/
 
 Además, el repositorio incluye una carpeta `ejemplos/` con varios ficheros de ejemplo con extensión `.eer` que puedes abrir directamente en la app (File → Open) para ver diagramas de muestra y editar.
 
+### Ejemplos incluidos
+
+Los siguientes ficheros ya están disponibles en la carpeta `ejemplos/`:
+
+- `ejemplos/202511ER_Hotel.eer` — Caso de estudio: **HOTELES ROYAL UMA** (habitaciones, servicios, personal y reservas). Ábrelo en la app para ver un diagrama completo.
+
+Si vas añadiendo más ficheros `.eer` dentro de `ejemplos/`, puedo ayudarte a listarlos aquí y subirlos al repositorio para que estén disponibles desde GitHub.
+
 ## 🚀 Características EER Soportadas
 
 - ✅ Entidades fuertes y débiles

@@ -1,0 +1,77 @@
+// --- CASO DE ESTUDIO: HOTELES ROYAL UMA ---
+
+// 1. HOTELES Y HABITACIONES (Entidad Débil)
+ent HOTEL (150, 100)
+key_att Nombre -> HOTEL (59, -2)
+att Direccion -> HOTEL (152, -30)
+att Categoria -> HOTEL (220, 24)
+
+weak_ent HABITACION (103, 353)
+key_att NumPuerta -> HABITACION (8, 443)
+att Piso -> HABITACION (106, 486)
+att Tipo -> HABITACION (192, 486)
+
+// Relación Identificativa
+ident_rel TIENE (103, 227)
+link HOTEL TIENE "1"
+link HABITACION TIENE "N" [total]
+
+// 2. SERVICIOS (Jerarquía / Especialización)
+// La flecha '->' indica participación total (doble línea)
+// 'd' indica disjunta (no pueden ser dos tipos a la vez)
+
+ent SERVICIO (500, 100)
+key_att Codigo -> SERVICIO (400, -7)
+att Nombre -> SERVICIO (504, -16)
+att CosteBase -> SERVICIO (595, 18)
+
+// Relación básica Hotel-Servicio
+rel OFRECE (325, 100)
+link HOTEL OFRECE "M"
+link SERVICIO OFRECE "N" [total]
+
+// Definición de la Jerarquía
+spec d -> SERVICIO (500, 200)
+
+ent RESTAURANTE (380, 300)
+att TipoComida -> RESTAURANTE (328, 377)
+att Terraza -> RESTAURANTE (412, 390)
+
+ent SPA (500, 300)
+att Masajes -> SPA (500, 360)
+
+ent SALON_EVENTOS (650, 300)
+att Capacidad -> SALON_EVENTOS (751, 358)
+att EquipoAV -> SALON_EVENTOS (683, 230)
+
+// Conexión de subclases
+link d RESTAURANTE
+link d SPA
+link d SALON_EVENTOS
+
+// 3. PERSONAL Y RESERVAS (Relación Ternaria)
+
+ent EMPLEADO (327, 539)
+key_att DNI -> EMPLEADO (218, 611)
+att Nombre -> EMPLEADO (328, 630)
+att Salario -> EMPLEADO (420, 636)
+att Antiguedad -> EMPLEADO (523, 627)
+
+// Relación empleado que trabaja en hotel
+rel TRABAJA_EN (223, 351)
+link HOTEL TRABAJA_EN "1"
+link EMPLEADO TRABAJA_EN "N"
+
+
+ent CLIENTE (850, 450)
+key_att DNI -> CLIENTE (824, 540)
+att Nombre -> CLIENTE (923, 532)
+
+// Relación Ternaria: Cliente reserva Salón supervisado por Empleado
+rel RESERVA (650, 450)
+att PrecioFinal -> RESERVA (687, 534)
+att Fecha -> RESERVA (576, 532)
+
+link SALON_EVENTOS RESERVA "N"
+link EMPLEADO RESERVA "1"
+link CLIENTE RESERVA "M"
